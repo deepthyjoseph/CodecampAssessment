@@ -23,7 +23,6 @@ public class Menuside {
         }
     }
 
-
     public boolean verifyNew() {
         WebElement newSide=driver.findElement(By.className("ribbon-top-left"));
          if(newSide.findElement(By.className("v-badge")).getText().equalsIgnoreCase("Korean Sticky Wings"))
@@ -36,6 +35,6 @@ public class Menuside {
     }
 
     public void addWait() {
-        new WebDriverWait(driver,15).until(ExpectedConditions.visibilityOf(driver.findElement(By.className("ribbon-top-left"))));
+        new WebDriverWait(driver,15).until(ExpectedConditions.visibilityOf(driver.findElement(By.className("v-badge"))));
     }
 }

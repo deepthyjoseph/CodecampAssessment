@@ -14,7 +14,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class testpizzaHQsuite {
 
     private WebDriver driver;
-
     @BeforeEach
     public void setup(){
 
@@ -34,17 +33,14 @@ public class testpizzaHQsuite {
     @Test
     public  void verifysidedish() {
 
-
         var menu = new Menuside(driver);
         driver.findElement(By.cssSelector("a[aria-label='menu']")).click();
         menu.clickSides();
         menu.addWait();
         Boolean flag = menu.verifyNew();
     }
-
-
     @AfterEach
     public void fin(){
-    //    driver.quit();
+        driver.quit();
     }
 }
